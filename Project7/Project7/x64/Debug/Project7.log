@@ -1,0 +1,11 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (Project7.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  Source.c
+C:\Users\student\source\repos\Project7\Project7\Source.c(11,8): warning C4477: "scanf": в строке форматирования "%a" требуется аргумент типа "float *", но вариативный аргумент "3" имеет тип "int *"
+C:\Users\student\source\repos\Project7\Project7\Source.c(12,9): warning C4476: "printf": неизвестный символ поля типа "\n" в описателе формата
+C:\Users\student\source\repos\Project7\Project7\Source.c(12,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "4" имеет тип "double"
+C:\Users\student\source\repos\Project7\Project7\Source.c(12,162): warning C4474: "printf" : для строки формата передано слишком много аргументов
+C:\Users\student\source\repos\Project7\Project7\Source.c(12,162): message : заполнители и их параметры ожидают переменное число аргументов в количестве 4, но было предоставлено 5
+C:\Users\student\source\repos\Project7\Project7\Source.c(15,13): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\student\source\repos\Project7\Project7\Source.c(16,14): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\student\source\repos\Project7\Project7\Source.c(8,15): warning C4101: g: неиспользованная локальная переменная
+  Project7.vcxproj -> C:\Users\student\source\repos\Project7\x64\Debug\lab3.exe
