@@ -1,0 +1,6 @@
+﻿  Source.c
+C:\Users\Л\source\repos\lab3dz\lab3dz\Source.c(14,18): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Л\source\repos\lab3dz\lab3dz\Source.c(15,18): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Л\source\repos\lab3dz\lab3dz\Source.c(16,12): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Л\source\repos\lab3dz\lab3dz\Source.c(9,16): warning C4101: grad: неиспользованная локальная переменная
+  lab3dz.vcxproj -> C:\Users\Л\source\repos\lab3dz\x64\Debug\lab3dz.exe
