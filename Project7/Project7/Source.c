@@ -17,11 +17,12 @@ void main(void)
 	printf("%d дюймов Ц это %.2f см\n", dym, result);
 	printf("%d испанских дюймов Ц это %.2f см \n", dym, result2);
 	scanf("%d%d", &a, &b);
-	puts("_____________");
+	puts("-------------");
 	puts("|a*b|a+b|a-b|");
-	puts("_____________");
+	puts("-------------");
 	printf("|%d*%d|%d+%d|%d-%d|\n", a, b, a, b, a, b);
-	puts("_____________");
-	printf("|%d |%d |%d |", a * b, a + b, a - b);
+	puts("-------------");
+	printf("| %d| %d| %d|\n", a * b, a + b, a - b);
+	puts("-------------");
 
 }
