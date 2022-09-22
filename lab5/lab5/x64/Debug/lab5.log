@@ -1,0 +1,6 @@
+﻿  Source.c
+C:\Users\TEMP\source\repos\lab5\lab5\Source.c(8,14): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\TEMP\source\repos\lab5\lab5\Source.c(13,12): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\TEMP\source\repos\lab5\lab5\Source.c(18,24): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\TEMP\source\repos\lab5\lab5\Source.c(23,21): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+  lab5.vcxproj -> C:\Users\TEMP\source\repos\lab5\x64\Debug\lab5.exe
