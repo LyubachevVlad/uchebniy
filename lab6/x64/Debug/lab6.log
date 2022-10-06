@@ -1,0 +1,4 @@
+﻿  Source.c
+C:\Users\student\source\repos\Example\lab6\Source.c(21,38): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\student\source\repos\Example\lab6\Source.c(21,66): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  lab6.vcxproj -> C:\Users\student\source\repos\Example\lab6\x64\Debug\lab6.exe
