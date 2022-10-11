@@ -1,1 +1,2 @@
 C:\Users\student\source\repos\Example\lab6\x64\Debug\lab6.exe
+C:\Users\Л\Documents\GitHub\uchebniy\lab6\x64\Debug\lab6.exe

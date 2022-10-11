@@ -1,4 +1,6 @@
 ﻿  Source.c
-C:\Users\student\source\repos\Example\lab6\Source.c(21,38): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-C:\Users\student\source\repos\Example\lab6\Source.c(21,66): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-  lab6.vcxproj -> C:\Users\student\source\repos\Example\lab6\x64\Debug\lab6.exe
+C:\Users\Л\Documents\GitHub\uchebniy\lab6\Source.c(21,38): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\Л\Documents\GitHub\uchebniy\lab6\Source.c(21,66): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Л\Documents\GitHub\uchebniy\lab6\Source.c(8,12): warning C4101: m: неиспользованная локальная переменная
+C:\Users\Л\Documents\GitHub\uchebniy\lab6\Source.c(8,10): warning C4101: n: неиспользованная локальная переменная
+  lab6.vcxproj -> C:\Users\Л\Documents\GitHub\uchebniy\lab6\x64\Debug\lab6.exe
