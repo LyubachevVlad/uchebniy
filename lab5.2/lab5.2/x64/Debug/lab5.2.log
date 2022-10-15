@@ -1,6 +1,10 @@
 ﻿  Source.c
-C:\Users\Л\source\repos\lab5.2\lab5.2\Source.c(8,14): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-C:\Users\Л\source\repos\lab5.2\lab5.2\Source.c(13,12): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-C:\Users\Л\source\repos\lab5.2\lab5.2\Source.c(18,24): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-C:\Users\Л\source\repos\lab5.2\lab5.2\Source.c(23,23): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-  lab5.2.vcxproj -> C:\Users\Л\source\repos\lab5.2\x64\Debug\lab5.2.exe
+C:\Users\Л\Documents\GitHub\uchebniy\lab5.2\lab5.2\Source.c(8,14): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Л\Documents\GitHub\uchebniy\lab5.2\lab5.2\Source.c(13,12): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Л\Documents\GitHub\uchebniy\lab5.2\lab5.2\Source.c(18,24): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Л\Documents\GitHub\uchebniy\lab5.2\lab5.2\Source.c(23,23): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Л\Documents\GitHub\uchebniy\lab5.2\lab5.2\Source.c(28,63): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Л\Documents\GitHub\uchebniy\lab5.2\lab5.2\Source.c(36,11): warning C4305: =: усечение из "double" в "float"
+C:\Users\Л\Documents\GitHub\uchebniy\lab5.2\lab5.2\Source.c(37,11): warning C4305: =: усечение из "double" в "float"
+C:\Users\Л\Documents\GitHub\uchebniy\lab5.2\lab5.2\Source.c(38,10): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  lab5.2.vcxproj -> C:\Users\Л\Documents\GitHub\uchebniy\lab5.2\x64\Debug\lab5.2.exe
