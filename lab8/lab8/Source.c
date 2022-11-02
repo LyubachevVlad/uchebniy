@@ -50,8 +50,8 @@ void main()
 	for (float x = 1; x <= 3; x+=l)
 	{
          y = F(x);
-		 printf("|%.3f|%.3f|\n", x, y);
 		 puts("______________\n");
+		 printf("|%.3f|%.3f|\n", x, y);
 		 puts("______________\n");
 	}
 	puts("¬ведите целое число");
