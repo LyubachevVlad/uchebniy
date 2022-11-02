@@ -9,7 +9,7 @@ float F(float x)
 void main()
 {
 	setlocale(LC_ALL, "RUS");
-	/*int a, c;
+	int a, c;
 	char b;
 	printf("¬ведите симаол и его количество:");
 	scanf("%c%d",&b,&a);
@@ -33,25 +33,25 @@ void main()
 	{
 		putchar('-');
 		putchar('!');
-	}*/
-	int n, m,s,i,t;
+	}
+	int n,m,s,i,t,p=1;
 	scanf("%d%d",&n,&m);
 	s = 0;
 	for (int i = m; i >= n; i--)
 	{
 		s+=i;
-		printf("выполнено %d раз\n", i+1);
+		printf("выполнено %d раз\n", p++);
 	}
 	printf("результат %d\n", s);
 	float y,k,x,l,h;
-	puts("y=x^3-4*x^2+2");
 	puts("¬ведите шаг табул€ци");
+	puts("y=x^3-4*x^2+2");
 	scanf("%f",&l);
 	for (float x = 1; x <= 3; x+=l)
 	{
          y = F(x);
-		 puts("______________\n");
 		 printf("|%.3f|%.3f|\n", x, y);
+		 puts("______________\n");
 		 puts("______________\n");
 	}
 	puts("¬ведите целое число");

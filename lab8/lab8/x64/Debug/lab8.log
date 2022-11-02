@@ -3,5 +3,5 @@ C:\Users\Л\source\repos\lab8\lab8\Source.c(6,38): warning C4244: инициал
 C:\Users\Л\source\repos\lab8\lab8\Source.c(60,34): warning C4305: +=: усечение из "double" в "float"
 C:\Users\Л\source\repos\lab8\lab8\Source.c(46,10): warning C4101: k: неиспользованная локальная переменная
 C:\Users\Л\source\repos\lab8\lab8\Source.c(46,12): warning C4101: x: неиспользованная локальная переменная
-C:\Users\Л\source\repos\lab8\lab8\Source.c(37,13): warning C4101: i: неиспользованная локальная переменная
+C:\Users\Л\source\repos\lab8\lab8\Source.c(37,12): warning C4101: i: неиспользованная локальная переменная
   lab8.vcxproj -> C:\Users\Л\source\repos\lab8\x64\Debug\lab8.exe
