@@ -1,0 +1,4 @@
+﻿  Source.c
+C:\Users\Л\source\repos\lab9\lab9\Source.c(9,23): warning C4101: z: неиспользованная локальная переменная
+C:\Users\Л\source\repos\lab9\lab9\Source.c(10,7): warning C4101: s: неиспользованная локальная переменная
+  lab9.vcxproj -> C:\Users\Л\source\repos\lab9\x64\Debug\lab9.exe
