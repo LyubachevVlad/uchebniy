@@ -1,0 +1,6 @@
+﻿  Source.c
+C:\Users\Л\source\repos\lab10dz\lab10dz\Source.c(20,12): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\Л\source\repos\lab10dz\lab10dz\Source.c(21,14): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\Л\source\repos\lab10dz\lab10dz\Source.c(31,10): warning C4101: j: неиспользованная локальная переменная
+C:\Users\Л\source\repos\lab10dz\lab10dz\Source.c(31,8): warning C4101: i: неиспользованная локальная переменная
+  lab10dz.vcxproj -> C:\Users\Л\source\repos\lab10dz\x64\Debug\lab10dz.exe
