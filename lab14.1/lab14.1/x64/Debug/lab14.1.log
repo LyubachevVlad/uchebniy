@@ -1,0 +1,6 @@
+﻿  Source.c
+C:\Users\student\Desktop\csharp\lab14.1\lab14.1\Source.c(15,6): warning C4101: N: неиспользованная локальная переменная
+C:\Users\student\Desktop\csharp\lab14.1\lab14.1\Source.c(37,8): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\student\Desktop\csharp\lab14.1\lab14.1\Source.c(79): warning C4716: sum_elements: должна возвращать значение
+C:\Users\student\Desktop\csharp\lab14.1\lab14.1\Source.c(106): warning C4716: function_min: должна возвращать значение
+  lab14.1.vcxproj -> C:\Users\student\Desktop\csharp\lab14.1\x64\Debug\lab14.1.exe
