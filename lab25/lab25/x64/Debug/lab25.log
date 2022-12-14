@@ -1,0 +1,7 @@
+﻿  Source.c
+C:\Users\Л\source\repos\lab25\lab25\Source.c(20,8): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Л\source\repos\lab25\lab25\Source.c(186,14): warning C4047: функция: "const char *const " отличается по уровням косвенного обращения от "int"
+C:\Users\Л\source\repos\lab25\lab25\Source.c(186,10): warning C4024: printf: различные типы для формального и фактического параметров 1
+C:\Users\Л\source\repos\lab25\lab25\Source.c(187,14): warning C4047: функция: "const char *const " отличается по уровням косвенного обращения от "int"
+C:\Users\Л\source\repos\lab25\lab25\Source.c(187,10): warning C4024: printf: различные типы для формального и фактического параметров 1
+  lab25.vcxproj -> C:\Users\Л\source\repos\lab25\x64\Debug\lab25.exe
