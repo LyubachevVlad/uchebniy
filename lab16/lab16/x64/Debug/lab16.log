@@ -1,0 +1,6 @@
+﻿  Source.c
+C:\Users\Л\source\repos\lab16\lab16\Source.c(13,8): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Л\source\repos\lab16\lab16\Source.c(20,3): warning C4098: main: функция типа "void", возвращающая значение
+C:\Users\Л\source\repos\lab16\lab16\Source.c(77,16): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\Л\source\repos\lab16\lab16\Source.c(71): warning C4716: sum: должна возвращать значение
+  lab16.vcxproj -> C:\Users\Л\source\repos\lab16\x64\Debug\lab16.exe
