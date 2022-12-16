@@ -1,0 +1,5 @@
+﻿  Source.c
+C:\Users\Л\source\repos\lab18\lab18\Source.c(39,12): warning C4305: =: усечение из "int" в "char"
+C:\Users\Л\source\repos\lab18\lab18\Source.c(22,18): warning C4101: w: неиспользованная локальная переменная
+C:\Users\Л\source\repos\lab18\lab18\Source.c(65,6): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  lab18.vcxproj -> C:\Users\Л\source\repos\lab18\x64\Debug\lab18.exe
