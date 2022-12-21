@@ -1,2 +1,6 @@
 ﻿  Source.c
+C:\Users\Л\source\repos\kursach\kursach\Source.c(55,11): warning C4098: file: функция типа "void", возвращающая значение
+C:\Users\Л\source\repos\kursach\kursach\Source.c(57,1): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "char [2]"
+C:\Users\Л\source\repos\kursach\kursach\Source.c(238,8): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Л\source\repos\kursach\kursach\Source.c(245,20): warning C4244: =: преобразование "double" в "int", возможна потеря данных
   kursach.vcxproj -> C:\Users\Л\source\repos\kursach\x64\Debug\kursach.exe
