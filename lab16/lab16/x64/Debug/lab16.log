@@ -1,13 +1,6 @@
 ﻿  Source.c
-C:\Users\student\source\repos\uch\uchebniy\lab16\lab16\Source.c(19,8): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
-C:\Users\student\source\repos\uch\uchebniy\lab16\lab16\Source.c(26,3): warning C4098: main: функция типа "void", возвращающая значение
-C:\Users\student\source\repos\uch\uchebniy\lab16\lab16\Source.c(41,3): warning C4098: main: функция типа "void", возвращающая значение
-C:\Users\student\source\repos\uch\uchebniy\lab16\lab16\Source.c(54,64): warning C4047: функция: "int *" отличается по уровням косвенного обращения от "int"
-C:\Users\student\source\repos\uch\uchebniy\lab16\lab16\Source.c(54,59): warning C4024: pmin: различные типы для формального и фактического параметров 2
-C:\Users\student\source\repos\uch\uchebniy\lab16\lab16\Source.c(54,69): warning C4047: функция: "int" отличается по уровням косвенного обращения от "int *"
-C:\Users\student\source\repos\uch\uchebniy\lab16\lab16\Source.c(54,42): warning C4024: insert: различные типы для формального и фактического параметров 3
-C:\Users\student\source\repos\uch\uchebniy\lab16\lab16\Source.c(16,12): warning C4101: k: неиспользованная локальная переменная
-C:\Users\student\source\repos\uch\uchebniy\lab16\lab16\Source.c(154,26): warning C4047: <: "int" отличается по уровням косвенного обращения от "int *"
-C:\Users\student\source\repos\uch\uchebniy\lab16\lab16\Source.c(161,12): warning C4047: return: "int *" отличается по уровням косвенного обращения от "int"
-C:\Users\student\source\repos\uch\uchebniy\lab16\lab16\Source.c(98): warning C4716: sum: должна возвращать значение
-  lab16.vcxproj -> C:\Users\student\source\repos\uch\uchebniy\lab16\x64\Debug\lab16.exe
+C:\Users\Л\source\repos\lab16\lab16\Source.c(13,8): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Л\source\repos\lab16\lab16\Source.c(20,3): warning C4098: main: функция типа "void", возвращающая значение
+C:\Users\Л\source\repos\lab16\lab16\Source.c(77,16): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\Л\source\repos\lab16\lab16\Source.c(71): warning C4716: sum: должна возвращать значение
+  lab16.vcxproj -> C:\Users\Л\source\repos\lab16\x64\Debug\lab16.exe
