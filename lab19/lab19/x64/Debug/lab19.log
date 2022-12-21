@@ -1,0 +1,8 @@
+﻿  Source.c
+C:\Users\Л\source\repos\lab19\lab19\Source.c(19,38): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Л\source\repos\lab19\lab19\Source.c(74,3): warning C4098: main: функция типа "void", возвращающая значение
+C:\Users\Л\source\repos\lab19\lab19\Source.c(95,4): warning C4098: main: функция типа "void", возвращающая значение
+C:\Users\Л\source\repos\lab19\lab19\Source.c(112,4): warning C4098: main: функция типа "void", возвращающая значение
+C:\Users\Л\source\repos\lab19\lab19\Source.c(84,11): warning C4101: x: неиспользованная локальная переменная
+C:\Users\Л\source\repos\lab19\lab19\Source.c(61): warning C4715: writefile: значение возвращается не при всех путях выполнения
+  lab19.vcxproj -> C:\Users\Л\source\repos\lab19\x64\Debug\lab19.exe
