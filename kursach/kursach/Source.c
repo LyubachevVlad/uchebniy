@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <io.h>
 #include <string.h>
+#include <malloc.h>
+#define PI 3.14159265358979323846
 typedef double (*Tfun)(double);
 struct bil
 {
@@ -14,6 +16,207 @@ struct bil
 	Tfun f;
 };
 typedef struct bil Bil;
+double Y(double x);
+double V(double x);
+void i(Tfun f, double xn, double xk, double h);
+void file(Tfun f, double xn, double xk, double h);
+void plot(double x0, double x1, Tfun f);
+int* shiftr(int** arr, int s, int shift);
+int* shiftd(int** arr, int s, int shift);
+void main()
+{
+	setlocale(LC_ALL, "RUS");
+	Bil lib = { 5,-1,1,1,Y };
+	char sk1, sk2, f;
+	int c = 0, marker = 0, marker2 = 0,c1 = 0,c2 = 0,c3 = 0;
+	while (c != 3)
+	{
+		puts("");
+		printf("          |----------------Меню----------------|\n");
+		printf("          |       С чем желаете работать?      |\n");
+		printf("          |             1.Функции              |\n");
+		printf("	  |         2.Двумерный массив         |\n");
+		printf("          |             3.Завершить            |\n");
+		printf("          |------------------------------------|\n");
+		scanf("%d", &c);
+		switch (c)
+		{
+		case 1:
+			printf("          |--------------------Меню функций-------------------|\n");
+			printf("          |            1.Вычислить значение функции           |\n");
+			printf("	  |     2.Вычислить значение функции на интервале     |\n");
+			printf("          |---------------------------------------------------|\n");
+			scanf("%d", &c1);
+			switch (c1)
+			{
+			case 1:
+				puts("          |         Введите переменную x:       |");
+				scanf("%lf", &lib.x);
+				printf("          |--------Выберете функцию которую хотите посчитать-------|\n");
+				printf("          |       1.Функция Y(x)=e^x+5+cos(0,001x)                 |\n");
+				printf("          |       2.Функция V(x)=2cos^3(x^2)+sin^2(x^3)-0,08f(x)   |\n");
+				printf("          |--------------------------------------------------------|\n");
+				scanf("%d", &c2);
+				switch (c2)
+				{
+				case 1:
+					printf("\n%lf", lib.f(lib.x));
+					break;
+				case 2:
+					lib.f = V;
+					printf("%lf\n", lib.f(lib.x));
+					break;
+				}
+				break;
+			case 2:
+				printf("          |------------------------------------|\n");
+				printf("          |        !!!Пример: [-36 0)!!!       |\n");
+				printf("          |------------------------------------|\n");
+				puts("\nВведите интервал:");
+				scanf(" %c%lf%lf%c", &sk1, &lib.x1, &lib.x2, &sk2);
+				puts("\nВведите шаг табуляции:");
+				scanf(" %lf", &lib.tab);
+				printf("          |----------Таблицы и графики---------|\n");
+				printf("          |      1.Вывести таблицу значений    |\n");
+				printf("          |      2.Построить график функции    |\n");
+				printf("          |------------------------------------|\n");
+				scanf("%d", &c3);
+				switch (c3)
+				{
+				case 1:
+					printf("          |----------Консоль или файл----------|\n");
+					printf("          |    1.Выводить значения в консоль   |\n");
+					printf("          |     2.Выводить значения в файл     |\n");
+					printf("          |------------------------------------|\n");
+					scanf("%d", &marker2);
+					printf("          |-------------------------Функция-------------------------|\n");
+					printf("          |              Какую функцию протабулировать?             |\n");
+					printf("          |             1.Функция Y(x)=e^x+5+cos(0,001x)            |\n");
+					printf("          |       2.Функция V(x)=2cos^3(x^2)+sin^2(x^3)-0,08f(x)    |\n");
+					printf("          |---------------------------------------------------------|\n");
+					scanf("%d", &marker);
+					switch (marker)
+					{
+					case 1:
+						switch (marker2)
+						{
+						case 1:
+							if (sk1 == '(') lib.x1 += lib.tab;
+							if (sk2 == ')') lib.x2 -= lib.tab;
+							i(lib.f, lib.x1, lib.x2, lib.tab);
+							break;
+						case 2:
+							if (sk1 == '(') lib.x1 += lib.tab;
+							if (sk2 == ')') lib.x2 -= lib.tab;
+							file(lib.f, lib.x1, lib.x2, lib.tab);
+							break;
+						}
+						break;
+					case 2:
+						switch (marker2)
+						{
+						case 1:
+							if (sk1 == '(') lib.x1 += lib.tab;
+							if (sk2 == ')') lib.x2 -= lib.tab;
+							lib.f = V;
+							i(lib.f, lib.x1, lib.x2, lib.tab);
+							break;
+						case 2:
+							if (sk1 == '(') lib.x1 += lib.tab;
+							if (sk2 == ')') lib.x2 -= lib.tab;
+							lib.f = V;
+							file(lib.f, lib.x1, lib.x2, lib.tab);
+							break;
+						}
+						break;
+					}
+					break;
+				case 2:
+					puts("");
+					printf("          |------------------Функция------------------|\n");
+					printf("          |  Какой график функции построить y или v?  |\n");
+					printf("          |-------------------------------------------|\n");
+					scanf(" %c", &f);
+					if (f == 'y') plot(lib.x1, lib.x2, lib.f);
+					if (f == 'v')
+					{
+						lib.f = V;
+						plot(lib.x1, lib.x2, lib.f);
+					}
+					break;
+				}
+			default:
+				break;
+			}
+			break;
+		case 2:
+			puts("");
+			int s;
+			int flag = 0, shift;
+			int** arr;
+			srand(time(NULL));
+			printf("          |         Введите размерность:       |\n");
+			scanf("%d", &s);
+			arr = (int**)malloc(s * sizeof(int*));
+			for (int i = 0; i < s; i++)
+			{
+				arr[i] = (int*)malloc(s * sizeof(int));
+				for (int j = 0; j < s; j++)
+				{
+					arr[i][j] = -10 + 1 * (10 - (-10)) * rand() / RAND_MAX;
+					printf("%3d ", arr[i][j]);
+				}
+				printf("\n");
+			}
+			puts("");
+			while (flag != 3)
+			{
+				printf("          |----------------Сдвиг----------------|\n");
+				printf("          |              1.В право              |\n");
+				printf("          |               2.Вниз                |\n");
+				printf("          |-------------------------------------|\n");
+				scanf("%d", &flag);
+				switch (flag)
+				{
+				case 1:
+					printf("          |       Введите желаемый сдвиг:       |\n");
+					scanf("%3d", &shift);
+					shiftr(arr, s, shift);
+					for (int i = 0; i < s; i++)
+					{
+						for (int j = 0; j < s; j++)
+						{
+							printf("%3d ", arr[i][j]);
+						}
+						printf("\n");
+						free(arr[i]);
+					}
+					free(arr);
+					break;
+				case 2:
+					printf("          |       Введите желаемый сдвиг:       |\n");
+					scanf("%3d", &shift);
+					shiftd(arr, s, shift);
+					for (int i = 0; i < s; i++)
+					{
+						for (int j = 0; j < s; j++)
+						{
+							printf("%3d ", arr[i][j]);
+						}
+						printf("\n");
+						free(arr[i]);
+					}
+					free(arr);
+					break;
+				default:
+					break;
+				}
+				break;
+			}
+			break;
+		}
+	}
+}
 double Y(double x)
 {
 	double y;
@@ -34,8 +237,6 @@ double V(double x)
 	v = 2 * pow(cos(pow(x, 2)), 3) + pow(sin(pow(x, 3)), 2) - 0.08 * f;
 	return v;
 }
-double Y(double);
-double V(double);
 void i(Tfun f, double xn, double xk, double h)
 {
 	char u = ' ';
@@ -64,9 +265,9 @@ void file(Tfun f, double xn, double xk, double h)
 }
 void plot(double x0, double x1, Tfun f)
 {
-	int SCREENW = 40, SCREENH = 40;
-	char screen[40][40];
-	double x, y[40];
+	int SCREENW = 120, SCREENH = 20;
+	char screen[120][20];
+	double x, y[120];
 	double ymin = 0, ymax = 0;
 	double hx, hy;
 	int i, j;
@@ -100,7 +301,7 @@ void plot(double x0, double x1, Tfun f)
 		putchar('\n');
 	}
 }
-void shiftr(int arr[50][50], int s, int shift)
+int* shiftr(int** arr, int s, int shift)
 {
 	for (int i = 0; i < s; i++)
 	{
@@ -113,16 +314,9 @@ void shiftr(int arr[50][50], int s, int shift)
 			t0 = t1;
 		}
 	}
-	for (int i = 0; i < s; i++)
-	{
-		for (int j = 0; j < s; j++)
-		{
-			printf("%3d ", arr[i][j]);
-		}
-		printf("\n");
-	}
+	return arr;
 }
-void shiftd(int arr[50][50], int s, int shift)
+int* shiftd(int** arr, int s, int shift)
 {
 	for (int j = 0; j < s; j++)
 	{
@@ -135,140 +329,5 @@ void shiftd(int arr[50][50], int s, int shift)
 			t0 = t1;
 		}
 	}
-	for (int i = 0; i < s; i++)
-	{
-		for (int j = 0; j < s; j++)
-		{
-			printf("%3d ", arr[i][j]);
-		}
-		printf("\n");
-	}
-}
-void main()
-{
-	setlocale(LC_ALL, "RUS");
-	Bil lib = { 5,-1,1,1,Y };
-	char sk1, sk2,f;
-	int c=0, marker = 0, marker2 = 0;
-	while (c != 6)
-	{
-		puts("");
-		puts("\nКакое действие:\n 1.Найти значение функции Y(x)\n 2.Найти значение функции F(x)\n 3.Вычислить значения функции Y(x) на заданном интервале, полуинтервале или отрезке\n 4.Вычислить значения функции V(x) на заданном интервале полуинтервале или отрезке\n 5.Построить график, выбранной функции Y(x) и F(x)\n 6.Завершение работы ");
-		scanf("%d", &c);
-		switch (c)
-		{
-		case 1:
-			puts("\nВведите переменную x:");
-			scanf("%lf", &lib.x);
-			printf("\n%lf", lib.f(lib.x));
-			break;
-		case 2:
-			puts("\nВведите переменную x:");
-			scanf("%lf", &lib.x);
-			lib.f = V;
-			printf("%lf\n", lib.f(lib.x));
-			break;
-		case 3:
-			printf("Выводить значения в консоль-1,выводить значения в файл-2\n");
-			scanf("%d", &marker);
-			switch (marker)
-			{
-			case 1:
-				puts("\nВведите интервал:");
-				scanf(" %c%lf%lf%c", &sk1, &lib.x1, &lib.x2, &sk2);
-				puts("\nВведите шаг табуляции:");
-				scanf(" %lf", &lib.tab);
-				if (sk1 == '(') lib.x1 += lib.tab;
-				if (sk2 == ')') lib.x2 -= lib.tab;
-				i(lib.f, lib.x1, lib.x2, lib.tab);
-				break;
-			case 2:
-				puts("\nВведите интервал:");
-				scanf(" %c%lf%lf%c", &sk1, &lib.x1, &lib.x2, &sk2);
-				puts("\nВведите шаг табуляции:");
-				scanf(" %lf", &lib.tab);
-				if (sk1 == '(') lib.x1 += lib.tab;
-				if (sk2 == ')') lib.x2 -= lib.tab;
-				file(lib.f, lib.x1, lib.x2, lib.tab);
-				break;
-			}
-			break;
-		case 4:
-			printf("Выводить значения в консоль-1,выводить значения в файл-2\n");
-			scanf("%d", &marker2);
-			switch (marker2)
-			{
-			case 1:
-				puts("\nВведите интервал:");
-				scanf(" %c%lf%lf%c", &sk1, &lib.x1, &lib.x2, &sk2);
-				puts("\nВведите шаг табуляции:");
-				scanf(" %lf", &lib.tab);
-				if (sk1 == '(') lib.x1 += lib.tab;
-				if (sk2 == ')') lib.x2 -= lib.tab;
-				i(lib.f, lib.x1, lib.x2, lib.tab);
-				break;
-			case 2:
-				puts("\nВведите интервал:");
-				scanf(" %c%lf%lf%c", &sk1, &lib.x1, &lib.x2, &sk2);
-				puts("\nВведите шаг табуляции:");
-				scanf(" %lf", &lib.tab);
-				if (sk1 == '(') lib.x1 += lib.tab;
-				if (sk2 == ')') lib.x2 -= lib.tab;
-				file(lib.f, lib.x1, lib.x2, lib.tab);
-				break;
-			}
-			break;
-		case 5:
-			puts("\nВведите интервал:");
-			scanf(" %c%lf%lf%c", &sk1, &lib.x1, &lib.x2, &sk2);
-			puts("\nВведите шаг табуляции:");
-			scanf(" %lf", &lib.tab);
-			puts("Какую функцию нарисовать?");
-			scanf(" %c", &f);
-			if (f=='y') plot(lib.x1, lib.x2, lib.f);
-			if (f=='v') plot(lib.x1, lib.x2, lib.f);
-			break;
-		default:
-			puts("Завершение");
-			break;
-		}
-	}
-	puts("");
-	int arr[50][50],s;
-	int flag=0,shift;
-	srand(time(NULL));
-	printf("Введите размерность:");
-	scanf("%d", &s);
-	for (int i = 0; i < s; i++)
-	{
-		for (int j = 0; j < s; j++)
-		{
-			arr[i][j] = -11 + 1. * (11 - (-11)) * rand() / RAND_MAX;
-			printf("%3d ", arr[i][j]);
-		}
-		printf("\n");
-	}
-	puts("");
-	while (flag != 3)
-	{
-		printf("\nКакой сдвиг хотите получить?\n");
-		printf("1-в право,2-вниз,3-завершение\n");
-		scanf("%d", &flag);
-		switch (flag)
-		{
-		case 1:
-			printf("Введите желаемый сдвиг\n");
-			scanf("%3d", &shift);
-			shiftr(arr, s, shift);
-			break;
-		case 2:
-			printf("Введите желаемый сдвиг\n");
-			scanf("%3d", &shift);
-			shiftd(arr, s, shift);
-			break;
-		default:
-			puts("Завершение");
-			break;
-		}
-	}
+	return arr;
 }
