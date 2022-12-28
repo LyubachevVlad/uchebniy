@@ -1,0 +1,3 @@
+﻿  Source.c
+C:\Users\Л\source\repos\lab16dz\lab16dz\Source.c(48,8): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
+  lab16dz.vcxproj -> C:\Users\Л\source\repos\lab16dz\x64\Debug\lab16dz.exe
