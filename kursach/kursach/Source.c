@@ -137,7 +137,11 @@ void main()
 					printf("          |  Какой график функции построить y или v?  |\n");
 					printf("          |-------------------------------------------|\n");
 					scanf(" %c", &f);
-					if (f == 'y') plot(lib.x1, lib.x2, lib.f);
+					if (f == 'y')
+					{
+						lib.f = Y;
+						plot(lib.x1, lib.x2, lib.f);
+					}
 					if (f == 'v')
 					{
 						lib.f = V;
