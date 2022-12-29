@@ -1,0 +1,3 @@
+﻿  Source.c
+C:\Users\Л\source\repos\lab21\lab21\Source.c(241): warning C4715: otb: значение возвращается не при всех путях выполнения
+  lab21.vcxproj -> C:\Users\Л\source\repos\lab21\x64\Debug\lab21.exe
