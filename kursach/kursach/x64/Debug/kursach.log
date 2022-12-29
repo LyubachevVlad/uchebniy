@@ -1,7 +1,7 @@
 ﻿  Source.c
-C:\Users\Л\source\repos\kursach\kursach\Source.c(158,10): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
-C:\Users\Л\source\repos\kursach\kursach\Source.c(258,11): warning C4098: file: функция типа "void", возвращающая значение
-C:\Users\Л\source\repos\kursach\kursach\Source.c(260,1): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "char [2]"
-C:\Users\Л\source\repos\kursach\kursach\Source.c(319,12): warning C4047: return: "int *" отличается по уровням косвенного обращения от "int **"
-C:\Users\Л\source\repos\kursach\kursach\Source.c(334,12): warning C4047: return: "int *" отличается по уровням косвенного обращения от "int **"
+C:\Users\Л\source\repos\kursach\kursach\Source.c(157,10): warning C4013: time: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Л\source\repos\kursach\kursach\Source.c(256,11): warning C4098: file: функция типа "void", возвращающая значение
+C:\Users\Л\source\repos\kursach\kursach\Source.c(258,1): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "char [2]"
+C:\Users\Л\source\repos\kursach\kursach\Source.c(317,12): warning C4047: return: "int *" отличается по уровням косвенного обращения от "int **"
+C:\Users\Л\source\repos\kursach\kursach\Source.c(332,12): warning C4047: return: "int *" отличается по уровням косвенного обращения от "int **"
   kursach.vcxproj -> C:\Users\Л\source\repos\kursach\x64\Debug\kursach.exe
