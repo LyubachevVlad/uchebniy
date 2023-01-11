@@ -42,6 +42,12 @@ int* maximum(int* array1, int* array2, int* array3, int size4, int* array4,int s
 	}
 	return array4;
 }
+int max1(int a, int b)
+{
+	if (a > b) return a;
+	if (a < b) return b;
+}
+
 void main()
 {
 	setlocale(LC_ALL, "RUS");
@@ -50,24 +56,13 @@ void main()
 	int size2 = 10 + rand() % 20 - 10;
 	int size3 = 10 + rand() % 20 - 10;
 	int size4 = 0;
-	if (((size1 > size2) && (size1 > size3)) || ((size1==size2) || (size1==size3)))
-	{
-		 size4 = size1;
-	}
-	else
-		if (((size2>size1)&&(size2>size3)) || ((size2 == size1) || (size2 == size3)))
-		{
-			 size4 = size2;
-		}
-		else
-			if (((size3 > size1) && (size3 > size2)) || ((size3 == size1) || (size3 == size2)))
-			{
-				 size4 = size3;
-			}
+	int box=max1(size1, size2);
+	size4 = max1(box, size3);
 	int* array1 = (int*)malloc(size1 * sizeof(int));
 	int* array2 = (int*)malloc(size2 * sizeof(int));
 	int* array3 = (int*)malloc(size3 * sizeof(int));
-	int* array4 = (int*)malloc(size4 * sizeof(int));
+	int* array4 = 0;
+	array4 = (int*)realloc(array4, size4 * sizeof(int));
 	randomarray(array1, size1);
 	puts("");
 	randomarray(array2, size2);
