@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\Л\source\repos\lab1C++\lab1C++\Source.cpp(32,15): warning C4101: c: неиспользованная локальная переменная
+C:\Users\Л\source\repos\lab1C++\lab1C++\Source.cpp(28): warning C4715: fun2: значение возвращается не при всех путях выполнения
+  lab1C++.vcxproj -> C:\Users\Л\source\repos\lab1C++\x64\Debug\lab1C++.exe
