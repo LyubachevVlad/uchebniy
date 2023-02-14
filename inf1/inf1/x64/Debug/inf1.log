@@ -1,0 +1,4 @@
+﻿  Source.c
+C:\Users\student\source\repos\uch\inf1\inf1\Source.c(28,17): warning C4133: функция: несовместимые типы - из "float *" в "long double *"
+C:\Users\student\source\repos\uch\inf1\inf1\Source.c(28,6): warning C4244: =: преобразование "long double" в "float", возможна потеря данных
+  inf1.vcxproj -> C:\Users\student\source\repos\uch\inf1\x64\Debug\inf1.exe
