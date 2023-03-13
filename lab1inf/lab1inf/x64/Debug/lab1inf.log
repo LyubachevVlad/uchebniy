@@ -1,0 +1,3 @@
+﻿  Source.c
+C:\Users\Л\source\repos\lab1inf\lab1inf\Source.c(32,18): warning C4101: j: неиспользованная локальная переменная
+  lab1inf.vcxproj -> C:\Users\Л\source\repos\lab1inf\x64\Debug\lab1inf.exe
